@@ -1,0 +1,3 @@
+{"question": "When did the Eiffel Tower open?", "answer": "It opened in 1889.", "contexts": ["The Eiffel Tower was completed in March 1889 for the World's Fair."], "ground_truth": "The Eiffel Tower opened on 31 March 1889."}
+{"question": "What is the capital of Australia?", "answer": "Sydney is the capital of Australia.", "contexts": ["Canberra is the capital city of Australia, chosen as a compromise between Sydney and Melbourne."], "ground_truth": "The capital of Australia is Canberra."}
+{"question": "Who wrote Hamlet?", "answer": "William Shakespeare wrote Hamlet around 1600.", "contexts": ["Hamlet is a tragedy written by William Shakespeare, believed to have been composed between 1599 and 1601."], "ground_truth": "Hamlet was written by William Shakespeare."}

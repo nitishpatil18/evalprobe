@@ -24,6 +24,9 @@ dependencies = [
     "pydantic>=2.12.5",
 ]
 
+[project.scripts]
+ragmeter = "ragmeter.cli:main"
+
 [project.urls]
 Homepage = "https://github.com/nitishpatil18/ragmeter"
 Repository = "https://github.com/nitishpatil18/ragmeter"
@@ -35,5 +38,5 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
-    "python-dotenv>=1.2.2",
+    "python-dotenv>=1.0.0",
 ]

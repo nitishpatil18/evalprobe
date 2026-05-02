@@ -1449,7 +1449,7 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "python-dotenv", specifier = ">=1.2.2" }]
+dev = [{ name = "python-dotenv", specifier = ">=1.0.0" }]
 
 [[package]]
 name = "referencing"
