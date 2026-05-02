@@ -1,5 +1,8 @@
 # evalprobe
 
+Try it
+https://huggingface.co/spaces/nitishpatil18/evalprobe-demo
+
 [![PyPI](https://img.shields.io/pypi/v/evalprobe)](https://pypi.org/project/evalprobe/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
