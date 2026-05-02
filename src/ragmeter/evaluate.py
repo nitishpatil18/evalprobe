@@ -1,11 +1,15 @@
 """Top-level evaluate() entry point."""
 from .types import EvalSample, EvalResult, MetricScore
 from .metrics.faithfulness import faithfulness
+from .metrics.relevancy import answer_relevancy
+from .metrics.correctness import answer_correctness
 from .llm import DEFAULT_MODEL
 
 
 METRIC_REGISTRY = {
     "faithfulness": faithfulness,
+    "answer_relevancy": answer_relevancy,
+    "answer_correctness": answer_correctness,
 }
 
 
@@ -19,6 +23,7 @@ def evaluate(
     Args:
         sample: The EvalSample to score.
         metrics: List of metric names. Defaults to all available metrics.
+            Note: 'answer_correctness' requires sample.ground_truth.
         model: LLM model name in litellm format.
 
     Returns:
