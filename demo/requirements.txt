@@ -1,2 +1,0 @@
-evalprobe>=0.1.1
-streamlit>=1.31.0
