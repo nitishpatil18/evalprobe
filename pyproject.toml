@@ -1,0 +1,34 @@
+[project]
+name = "ragmeter"
+version = "0.1.0"
+description = "Lightweight, reliable RAG evaluation for solo AI builders. Faithfulness, relevancy, correctness in 5 lines."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Nitish Patil", email = "patilnitish444@gmail.com" }
+]
+requires-python = ">=3.10"
+keywords = ["rag", "evaluation", "llm", "ai", "metrics", "faithfulness", "relevancy"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "litellm>=1.83.14",
+    "pydantic>=2.12.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/nitishpatil18/ragmeter"
+Repository = "https://github.com/nitishpatil18/ragmeter"
+Issues = "https://github.com/nitishpatil18/ragmeter/issues"
+
+[build-system]
+requires = ["uv_build>=0.11.8,<0.12.0"]
+build-backend = "uv_build"
