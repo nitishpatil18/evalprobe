@@ -1437,11 +1437,19 @@ dependencies = [
     { name = "pydantic" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "python-dotenv" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "litellm", specifier = ">=1.83.14" },
     { name = "pydantic", specifier = ">=2.12.5" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "python-dotenv", specifier = ">=1.2.2" }]
 
 [[package]]
 name = "referencing"
