@@ -1,13 +1,15 @@
 # evalprobe
 
-Try it
-https://huggingface.co/spaces/nitishpatil18/evalprobe-demo
+# evalprobe
 
+[![Demo](https://img.shields.io/badge/demo-Hugging%20Face-yellow)](https://huggingface.co/spaces/nitishpatil18/evalprobe-demo)
 [![PyPI](https://img.shields.io/pypi/v/evalprobe)](https://pypi.org/project/evalprobe/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 
 **Lightweight, reliable RAG evaluation for solo AI builders.** Faithfulness, relevancy, and correctness in 5 lines. Works with any LLM via [litellm](https://github.com/BerriAI/litellm).
+
+[**Try it in your browser →**](https://huggingface.co/spaces/nitishpatil18/evalprobe-demo)
 
 Other RAG eval libraries are heavy, brittle, or focused on enterprise. evalprobe is the smallest thing that actually works.
 
