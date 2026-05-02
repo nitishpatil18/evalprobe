@@ -1,5 +1,5 @@
 """Tests for core data types."""
-from ragmeter import EvalSample, MetricScore, EvalResult
+from evalprobe import EvalSample, MetricScore, EvalResult
 
 
 def test_evalsample_minimal():

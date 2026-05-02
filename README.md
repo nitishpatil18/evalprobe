@@ -1,23 +1,23 @@
-# ragmeter
+# evalprobe
 
-[![PyPI](https://img.shields.io/pypi/v/ragmeter)](https://pypi.org/project/ragmeter/)
+[![PyPI](https://img.shields.io/pypi/v/evalprobe)](https://pypi.org/project/evalprobe/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 
 **Lightweight, reliable RAG evaluation for solo AI builders.** Faithfulness, relevancy, and correctness in 5 lines. Works with any LLM via [litellm](https://github.com/BerriAI/litellm).
 
-Other RAG eval libraries are heavy, brittle, or focused on enterprise. ragmeter is the smallest thing that actually works.
+Other RAG eval libraries are heavy, brittle, or focused on enterprise. evalprobe is the smallest thing that actually works.
 
 ## Install
 
 ```bash
-pip install ragmeter
+pip install evalprobe
 ```
 
 ## Use it
 
 ```python
-from ragmeter import evaluate, EvalSample
+from evalprobe import evaluate, EvalSample
 
 sample = EvalSample(
     question="When did the Eiffel Tower open?",
@@ -46,7 +46,7 @@ Evaluate a JSONL file of samples and write results:
 ```bash
 export OPENAI_API_KEY=sk-...
 
-ragmeter eval samples.jsonl \
+evalprobe eval samples.jsonl \
   --model gpt-4o-mini \
   --output results.jsonl
 ```
@@ -68,7 +68,7 @@ All three return scores in `[0.0, 1.0]`. Higher is better.
 
 ## Any LLM, any provider
 
-ragmeter uses [litellm](https://github.com/BerriAI/litellm) under the hood, so any model name litellm understands works:
+evalprobe uses [litellm](https://github.com/BerriAI/litellm) under the hood, so any model name litellm understands works:
 
 ```python
 evaluate(sample, model="gpt-4o-mini")
@@ -79,9 +79,9 @@ evaluate(sample, model="ollama/llama3.1")
 
 Set the corresponding `OPENAI_API_KEY`, `GROQ_API_KEY`, `ANTHROPIC_API_KEY`, etc.
 
-## Why ragmeter
+## Why evalprobe
 
-| | ragmeter | ragas | langsmith |
+| | evalprobe | ragas | langsmith |
 |---|---|---|---|
 | Install size | small | heavy | heavy |
 | LLM provider | any (litellm) | partial | partial |

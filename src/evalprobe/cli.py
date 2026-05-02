@@ -1,4 +1,4 @@
-"""Command-line interface for ragmeter."""
+"""Command-line interface for evalprobe."""
 import argparse
 import json
 import sys
@@ -41,7 +41,7 @@ def _format_summary(all_scores: dict[str, list[float]]) -> str:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
-        prog="ragmeter",
+        prog="evalprobe",
         description="Lightweight, reliable RAG evaluation.",
     )
     sub = parser.add_subparsers(dest="command", required=True)

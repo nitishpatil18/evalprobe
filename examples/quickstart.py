@@ -1,6 +1,6 @@
 """Smoke test: run all three metrics on a sample with a known hallucination."""
 from dotenv import load_dotenv
-from ragmeter import evaluate, EvalSample
+from evalprobe import evaluate, EvalSample
 
 load_dotenv()
 

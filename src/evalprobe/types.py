@@ -1,4 +1,4 @@
-"""Core data types for ragmeter."""
+"""Core data types for evalprobe."""
 from typing import Optional
 from pydantic import BaseModel, Field
 

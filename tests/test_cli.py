@@ -1,7 +1,7 @@
 """Tests for the CLI argument parsing and file loading. No LLM calls."""
 import json
 import pytest
-from ragmeter.cli import _load_samples, main
+from evalprobe.cli import _load_samples, main
 
 
 def test_load_samples_reads_jsonl(tmp_path):

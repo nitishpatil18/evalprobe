@@ -1,5 +1,5 @@
 [project]
-name = "ragmeter"
+name = "evalprobe"
 version = "0.1.0"
 description = "Lightweight, reliable RAG evaluation for solo AI builders. Faithfulness, relevancy, correctness in 5 lines."
 readme = "README.md"
@@ -25,12 +25,12 @@ dependencies = [
 ]
 
 [project.scripts]
-ragmeter = "ragmeter.cli:main"
+evalprobe = "evalprobe.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/nitishpatil18/ragmeter"
-Repository = "https://github.com/nitishpatil18/ragmeter"
-Issues = "https://github.com/nitishpatil18/ragmeter/issues"
+Homepage = "https://github.com/nitishpatil18/evalprobe"
+Repository = "https://github.com/nitishpatil18/evalprobe"
+Issues = "https://github.com/nitishpatil18/evalprobe/issues"
 
 [build-system]
 requires = ["uv_build>=0.11.8,<0.12.0"]
@@ -38,7 +38,7 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
-    "pytest>=9.0.3",
-    "pytest-asyncio>=1.3.0",
     "python-dotenv>=1.0.0",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
 ]

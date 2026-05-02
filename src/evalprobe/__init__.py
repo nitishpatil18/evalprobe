@@ -1,4 +1,4 @@
-"""ragmeter: lightweight, reliable RAG evaluation."""
+"""evalprobe: lightweight, reliable RAG evaluation."""
 from .types import EvalSample, EvalResult, MetricScore
 from .evaluate import evaluate
 from .metrics.faithfulness import faithfulness

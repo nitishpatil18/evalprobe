@@ -1,7 +1,7 @@
 """Tests for the evaluate() entry point. No LLM calls."""
 import pytest
-from ragmeter import evaluate, EvalSample
-from ragmeter.evaluate import METRIC_REGISTRY
+from evalprobe import evaluate, EvalSample
+from evalprobe.evaluate import METRIC_REGISTRY
 
 
 def test_registry_has_three_metrics():
@@ -20,7 +20,7 @@ def test_evaluate_unknown_metric_raises():
 
 def test_faithfulness_no_contexts_short_circuits():
     """faithfulness should return score=0 with an error detail, not call the LLM."""
-    from ragmeter.metrics.faithfulness import faithfulness
+    from evalprobe.metrics.faithfulness import faithfulness
 
     s = EvalSample(question="q", answer="a", contexts=[])
     score = faithfulness(s)
@@ -30,7 +30,7 @@ def test_faithfulness_no_contexts_short_circuits():
 
 def test_correctness_no_ground_truth_short_circuits():
     """answer_correctness should return score=0 if ground_truth missing."""
-    from ragmeter.metrics.correctness import answer_correctness
+    from evalprobe.metrics.correctness import answer_correctness
 
     s = EvalSample(question="q", answer="a", ground_truth=None)
     score = answer_correctness(s)
@@ -40,7 +40,7 @@ def test_correctness_no_ground_truth_short_circuits():
 
 def test_relevancy_empty_answer_short_circuits():
     """answer_relevancy should return score=0 with error for empty answer."""
-    from ragmeter.metrics.relevancy import answer_relevancy
+    from evalprobe.metrics.relevancy import answer_relevancy
 
     s = EvalSample(question="q", answer="   ")
     score = answer_relevancy(s)
