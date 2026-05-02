@@ -5,12 +5,19 @@ from ..llm import call_json, DEFAULT_MODEL
 
 
 CORRECTNESS_PROMPT = """Compare a candidate answer against a reference (ground truth) answer.
-Identify factual statements in each and classify them.
 
-Definitions:
-- TP (true positive): facts present in BOTH candidate and reference
-- FP (false positive): facts in candidate but NOT in reference (hallucinations or extras)
-- FN (false negative): facts in reference but missing from candidate
+Step 1: Extract atomic factual claims from each. An atomic claim is a single, self-contained, verifiable statement of fact (e.g. "The Eiffel Tower is 330 meters tall"). It is NOT a comment about the comparison itself (e.g. "the date is missing").
+
+Step 2: Classify each claim:
+- TP (true positive): a factual claim present in BOTH the candidate and the reference (same meaning, even if worded differently or with different units like "330 metres" and "1,083 ft")
+- FP (false positive): a factual claim made in the candidate that is NOT supported by the reference
+- FN (false negative): a factual claim made in the reference that is NOT made by the candidate
+
+Strict rules:
+- Output ONLY atomic factual claims. Do NOT include meta-commentary, observations, or descriptions of what is missing or different.
+- A unit conversion of the same fact (e.g. "330 metres" and "1,083 ft") is the SAME fact. Put it in TP, not FN.
+- A more specific version of the same fact (e.g. "1889" vs "31 March 1889") is the SAME fact for TP. Do not penalize the candidate for being less specific.
+- Each claim should be a short, self-contained sentence.
 
 Question: {question}
 Candidate answer: {candidate}

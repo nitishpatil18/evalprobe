@@ -6,7 +6,7 @@ from .metrics.relevancy import answer_relevancy
 from .metrics.correctness import answer_correctness
 from .llm import LLMError, DEFAULT_MODEL
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = [
     "evaluate",

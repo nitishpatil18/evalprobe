@@ -1,6 +1,6 @@
 [project]
 name = "evalprobe"
-version = "0.1.0"
+version = "0.1.1"
 description = "Lightweight, reliable RAG evaluation for solo AI builders. Faithfulness, relevancy, correctness in 5 lines."
 readme = "README.md"
 license = { text = "MIT" }
@@ -41,4 +41,5 @@ dev = [
     "python-dotenv>=1.0.0",
     "pytest>=8.0.0",
     "pytest-asyncio>=0.24.0",
+    "streamlit>=1.57.0",
 ]
